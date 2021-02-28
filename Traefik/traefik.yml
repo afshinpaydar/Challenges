@@ -3,7 +3,9 @@ api:
 
 providers:
   docker:
+    watch: false
     exposedByDefault: true
     swarmMode: true
+
 log:
   level: INFO
