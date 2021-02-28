@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  traefik:
+    image: traefik:v2.3
+    command: 
+      - "--api.insecure=true"
+      - "--providers.docker"
+      - "--log.level=INFO"
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+  whoami:
+    image: traefik/whoami
+    labels:
+      - "traefik.http.routers.whoami.rule=Host(`whoami.docker.localhost`)"
