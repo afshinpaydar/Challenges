@@ -9,4 +9,3 @@ providers:
 
 log:
   level: INFO
-
