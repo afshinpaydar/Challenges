@@ -1,0 +1,9 @@
+api:
+  dashboard: true
+
+providers:
+  docker:
+    exposedByDefault: true
+    swarmMode: true
+log:
+  level: INFO
